@@ -13,6 +13,7 @@ const reportesRoutes = require('./routes/reportesRoutes');
 const fasesRoutes = require('./routes/fasesRoutes');
 const paralizacionesRoutes = require('./routes/paralizacionesRoutes');
 const standbyRoutes = require('./routes/standbyRoutes');
+const actividadesRoutes = require('./routes/actividadesRoutes');
 
 const app = express();
 app.use(cors());
@@ -33,6 +34,7 @@ app.use('/api/equipos', require('./routes/equiposRoutes'));
 app.use('/api/fases', fasesRoutes);
 app.use('/api/paralizaciones', paralizacionesRoutes);
 app.use('/api/standby', standbyRoutes);
+app.use('/api/actividades', actividadesRoutes);
 
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => console.log(`✅ Servidor corriendo en puerto ${PORT}`));
